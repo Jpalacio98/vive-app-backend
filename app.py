@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from utils.firebase_config import send_notification, subcribe_to_topic, topic_send_notification
-
+import os
+from dotenv import load_dotenv
 # backend configuration
 app = Flask(__name__)
 
@@ -38,4 +39,5 @@ def api_topic_send_notification():
     return jsonify({'response': str(response)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv('PORT', 5000))  # Usa el puerto definido en .env o 5000 por defecto
+    app.run(debug=True, port=port)
