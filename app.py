@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from utils.firebase_config import send_notification, subcribe_to_topic, topic_send_notification
 
+# backend configuration
 app = Flask(__name__)
 
 @app.route('/send_notification', methods=['POST'])
