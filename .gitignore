@@ -4,5 +4,3 @@ __pycache__
 test service.py
 .env
 utils/serviceAccountKey.json
-
-utils/serviceAccountKey.json
